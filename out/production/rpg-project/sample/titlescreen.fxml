@@ -14,6 +14,5 @@
       </Text>
       <Button fx:id="newGame" alignment="TOP_CENTER" layoutX="244.0" layoutY="188.0" mnemonicParsing="false" onAction="#showCharacter" prefHeight="25.0" prefWidth="111.0" text="Nouvelle Partie" textAlignment="CENTER" />
       <Button fx:id="exitButton" alignment="CENTER" layoutX="250.0" layoutY="361.0" mnemonicParsing="false" onAction="#quitter" prefHeight="13.0" prefWidth="100.0" text="Quitter" textAlignment="CENTER" />
-      <Button layoutX="224.0" layoutY="273.0" mnemonicParsing="false" onAction="#charger_personnage" text="Charger personnage" />
    </children>
 </AnchorPane>

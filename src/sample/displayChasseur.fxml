@@ -5,31 +5,69 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Chasseur_Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button layoutX="248.0" layoutY="362.0" mnemonicParsing="false" onAction="#sauvegarde" text="Sauvegarder">
-         <font>
-            <Font name="FreeMono" size="13.0" />
-         </font>
-      </Button>
-      <HBox prefHeight="203.0" prefWidth="201.0" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="399.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fitHeight="400.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../ressources/imgchasseur.png" />
-               </image>
-            </ImageView>
-         </children>
-      </HBox>
-      <Label layoutX="216.0" layoutY="11.0" prefHeight="37.0" prefWidth="78.0" text="Label" />
-      <Label layoutX="3.0" layoutY="203.0" text="Arc, fleches :" />
-      <Label layoutX="4.0" layoutY="219.0" text="Vie" />
-      <Label layoutX="3.0" layoutY="235.0" text="Niveau" />
-      <Label layoutX="3.0" layoutY="251.0" prefHeight="16.0" prefWidth="44.0" text="Mana" />
-      <Button fx:id="lancerPartie" layoutX="371.0" layoutY="95.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="166.0" text="Jouer">
+      <Button fx:id="lancerPartie" layoutX="371.0" layoutY="95.0" mnemonicParsing="false" onAction="#lancerPartie" prefHeight="109.0" prefWidth="166.0" text="Jouer">
          <font>
             <Font size="31.0" />
-         </font>
-      </Button>
+         </font></Button>
+      <ImageView fitHeight="284.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/imgchasseur.png" />
+         </image></ImageView>
+      <GridPane layoutY="288.0" prefHeight="98.0" prefWidth="200.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="36.0" prefWidth="100.0" text="PV :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="100.0" text="Mana :" GridPane.rowIndex="1">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label text="Niveau :" GridPane.rowIndex="2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label text="Armes :" GridPane.rowIndex="3">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="pv_chasseur" prefHeight="63.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            <Label fx:id="mana_chasseur" prefHeight="26.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="niveau_chasseur" prefHeight="83.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="armes_chasseur" prefHeight="56.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>
+
