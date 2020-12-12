@@ -33,7 +33,7 @@ public class Controller{
 
 
     public void displayChasseur(ActionEvent event)throws IOException{
-        System.out.println(idName.getText());
+        System.out.println(idName);
         Parent affichagePersonnage = FXMLLoader.load(getClass().getResource("displayChasseur.fxml"));
         Scene classesScene = new Scene(affichagePersonnage);
         Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -56,8 +56,9 @@ public class Controller{
         window.setScene(classesScene);
         window.show();
     }
+    public void charger_personnage(){}
 
-    public void getName(){
-        idName.getText();
+    public TextField getName(){
+        return idName;
     }
 }
